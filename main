@@ -1,0 +1,14 @@
+def main():
+    player = next_player("")
+    board = create_board()
+    while not (has_winner(board) or is_a_draw(board)):
+        display_board(board)
+        make_move(player, board)
+        player = next_player(player)
+    display_board(board)
+    print("Game over. Thanks for playing!") 
+
+
+
+if __name__ == "__main__":
+    main()
